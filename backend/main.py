@@ -46,7 +46,7 @@ class RecommendationResponse(BaseModel):
 # Configuration
 TMDB_API_KEY = os.getenv("TMDB_API_KEY", "your_tmdb_api_key")
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")  # NEW: Add Groq API key
-print(f"Using TMDB API Key: {TMDB_API_KEY}")
+
 TMDB_BASE_URL = "https://api.themoviedb.org/3"
 
 # NEW: Initialize Groq client
