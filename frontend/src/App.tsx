@@ -150,6 +150,23 @@ const MovieRecommender: React.FC = () => {
     setError("");
     setSelectedMood(mood);
 
+    if (mood === "horny") {
+      setMovies([
+        {
+          id: 1,
+          title: "Rick Astley - Never Gonna Give You Up (Official Music Video)",
+          overview:
+            "You have been Rickrolled! Enjoy this classic internet prank with a twist of romance and adventure.",
+          poster_path: "",
+          release_date: "0000-00-00",
+          vote_average: 6.9,
+          genre_ids: [18, 10402],
+        },
+      ]);
+      setLoading(false);
+      return;
+    }
+
     try {
       const requestBody: MoodRequest = { mood };
 
