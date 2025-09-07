@@ -17,7 +17,7 @@ app = FastAPI(title="Movie Recommender API", version="1.0.0")
 # CORS middleware for frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://watchthis-black.vercel.app/"],  # Configure properly for production
+    allow_origins=["https://watchthis-black.vercel.app"],  # Configure properly for production
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
