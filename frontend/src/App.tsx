@@ -153,13 +153,16 @@ const MovieRecommender: React.FC = () => {
     try {
       const requestBody: MoodRequest = { mood };
 
-      const response = await fetch("http://localhost:8000/recommend", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(requestBody),
-      });
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/recommend`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(requestBody),
+        }
+      );
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
